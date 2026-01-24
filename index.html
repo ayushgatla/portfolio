@@ -72,17 +72,29 @@
     </nav>
     <section id="home" class="h-auto pt-4">
 
-        <div id="liquid" class="liquid-cursor"></div>
+        <div id="liquid" class="liquid-cursor hidden"></div>
 
 
         <div class="flex relative group justify-center items-center flex-col h-full  ">
             <div class="w-full h-[80px] flex justify-center items-center ">
-                <div class="w-[120px] h-[50px] border border-2 rounded-xl">
-                    <div class="w-1/2 h-full rounded-xl bg-black flex justify-center items-center">
-                        <img src="icons/white_sun.png" class="w-[30px] h-[30px]" alt="">
-                    </div>
-                    <div class="w-1/2 h-full">
+                <div class="w-[120px] flex h-[50px] border border-2 rounded-xl">
+                    <div id="box1" class="w-1/2 h-full rounded-xl bg-black flex justify-center items-center">
+                        <button id="wsun">
+                            <img src="icons/white_sun.png" class="w-[30px] h-[30px]" alt="">
+                        </button>
+                        <button id="bsun">
+                            <img src="icons/black_sun.png" class="w-[30px] hidden h-[30px]" alt="">
+                        </button>
 
+                    </div>
+
+                    <div id="box2" class="w-1/2 h-full rounded-xl flex justify-center items-center">
+                        <button id="wmoon">
+                            <img src="icons/white_moon.png" class="w-[30px] hidden h-[30px]" alt="">
+                        </button>
+                        <button id="bmoon">
+                            <img src="icons/black_moon.png" class="w-[30px]  h-[30px]" alt="">
+                        </button>
                     </div>
                 </div>
             </div>
@@ -101,20 +113,20 @@
                     style="-webkit-text-stroke: 2px rgba(0, 0, 0, 0.824);">Portfolio</h1>
 
             </div>
-            <img src="bgs/front2.png"
-                class="absolute bottom-0  w-[clamp(300px,50vw,500px)] h-auto  [mask-image:linear-gradient(to_bottom,black_95%,transparent)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent)]"
-                style="pointer-events: none" alt="">
+
         </div>
 
     </section>
     <section id="About" class="h-screen max-lg:h-auto P-4  bg-gray-200">
         <div class="flex justify-center items-center h-full max-lg:flex-col-reverse max-lg:gap-12  max-md:h-auto">
-            <div
+            <div id="flo"
                 class="w-1/3 h-auto bg-white border max-lg:w-[30%] max-lg:ml-0 rounded-lg shadow-lg ml-auto flex justify-center items-center p-4 divs">
-                <img src="bgs/flower.png" alt="">
+                <img id="flower" src="bgs/flower.png" alt="">
+                <img id="flower2" class="hidden" src="icons/flower2.png" alt="">
+
             </div>
-            <div
-                class="w-1/2 h-auto bg-gray-200 border rounded-lg shadow-lg mr-auto ml-6 max-sm:ml-0 max-lg:w-[90%] max-lg:mr-0 justify-center items-center p-4 divs">
+            <div id="aboutbox"
+                class="w-1/2 h-auto bg-gray-300 border rounded-lg shadow-lg mr-auto ml-6 max-sm:ml-0 max-lg:w-[90%] max-lg:mr-0 justify-center items-center p-4 divs">
                 <h1 class="text-5xl font-mono ">About Me</h1><br>
                 <p class="font-mono ">I'm currently pursuing my B.Tech in Computer Science and
                     Engineering at IIITDM
@@ -137,14 +149,14 @@
 
 
                 </p>
-                <p class="text-2xl font-serif italic text-gray-700">"Creativity is intelligence having fun." - Albert
+                <p class="text-2xl font-serif italic">"Creativity is intelligence having fun." - Albert
                     Einstein</p>
 
             </div>
         </div>
     </section>
     <section id="Skills" class="h-auto w-full max-sm:mt-12 ">
-        <div class="w-full h-[1300px] flex justify-center items-center relative  ">
+        <div class="w-full h-[1300px] flex justify-center items-center relative solar ">
 
             <div class="solar-system h-full w-full  overflow-x-hidden">
                 <div class="orbit  border border-2">
@@ -187,7 +199,7 @@
                 <div class="flex max-md:flex-col h-auto">
 
                     <div
-                        class="w-[clamp(350px,50vw,500px)] h-[320px] max-md:h-auto bg-white  border rounded-lg shadow-lg mr-auto ml-6 max-lg:w-[90%] max-lg:mr-0  p-4 divs">
+                        class="w-[clamp(350px,50vw,500px)] block  h-[320px] max-md:h-auto bg-white  border rounded-lg shadow-lg mr-auto ml-6 max-lg:w-[90%] max-lg:mr-0  p-4 divs">
                         <div class="flex">
                             <div style="border-radius: 50%;"
                                 class="w-[80px] h-[80px] overflow-hidden bg-black flex justify-center items-center">
@@ -229,7 +241,7 @@
 
                         </div>
                         <div
-                            class="ml-4 w-[120px] mb-4 h-[50px] overflow-hidden flex rounded-xl bg-black justify-center items-center">
+                            class="ml-4 w-[120px]  mb-4 h-[50px] overflow-hidden flex rounded-xl bg-black justify-center items-center">
                             <a href="https://github.com/ayushgatla/lecture-block" target="_blank"
                                 class="overflow-hidden flex rounded-xl bg-black justify-center items-center">
                                 <img class="absolute" src="icons/github.png" class="rounded-xl "
@@ -239,8 +251,8 @@
                         </div>
                     </div>
                     <div
-                        class="w-[300px] h-auto mt-4     bg-white  border rounded-lg shadow-lg mr-auto ml-6 max-lg:w-[90%] max-lg:mr-0 justify-center items-center p-4 divs">
-                        <div class="flex gap-4">
+                        class="w-[300px] h-auto mt-4  block   bg-white  border rounded-lg shadow-lg mr-auto ml-6 max-lg:w-[90%] max-lg:mr-0 justify-center items-center p-4 divs">
+                        <div class="flex gap-4  ">
 
                             <div class="w-[100px] max-md:w-[70px] h-[70px] overflow-hidden bg-black flex justify-center items-center"
                                 style="border-radius: 50%;">
@@ -292,20 +304,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex h-auto max-md:flex-col-reverse ">
+                <div class="flex h-auto  max-md:flex-col-reverse ">
                     <div
-                        class="w-[350px] h-[380px] bg-white   border rounded-lg shadow-lg  ml-6 max-lg:w-[90%] max-lg:mr-0 justify-center items-center p-4 divs">
+                        class="w-[350px] block h-[380px] bg-white   border rounded-lg shadow-lg  ml-6 max-lg:w-[90%] max-lg:mr-0 justify-center items-center p-4 divs">
                         <div class="w-full h-full flex justify-center items-center ">
                             <h1 class="text-3xl font-bold mine">Coming Soon</h1>
                         </div>
 
                     </div>
                     <div
-                        class="w-[clamp(350px,50vw,500px)] h-auto h-auto bg-white  border rounded-lg shadow-lg mr-auto ml-2 max-md:mr-0 max-md:ml-6 max-lg:w-[90%] max-lg:mr-0 justify-center items-center p-4 divs">
-                        <div class="flex gap-2 "><img src="icons/QuizzAI.png" class="w-[100px] h-[100px]" alt="">
+                        class="w-[clamp(350px,50vw,500px)] block h-auto h-auto bg-white  border rounded-lg shadow-lg mr-auto ml-2 max-md:mr-0 max-md:ml-6 max-lg:w-[90%] max-lg:mr-0 justify-center items-center p-4 divs">
+                        <div class="flex gap-2 ">
+                            <img src="icons/QuizzAI.png" class="w-[100px] rounded-[50%] h-[100px]" alt="">
                             <div>
 
-                                <h1 class="text-xl font-bold ">QuizzAI</h1>
+                                <h1 class="text-xl font-bold ml-2 ">QuizzAI</h1>
                                 <p class="font-thin text-[clamp(0.6rem,1.5vw,1rem)] p-2">This a Website to make those
                                     boring
                                     pdfs which you try to mugup 1
@@ -346,7 +359,6 @@
                             <div class="w-[100px] justify-center flex items-center h-[25px] bg-black rounded-2xl">
                                 <h1 class="text-white text-xs font-['Media Sans SemiCondensed']">FastApi</h1>
                             </div>
-
                         </div>
                         <div
                             class="ml-4 w-[120px] mt-4 h-[50px] overflow-hidden flex rounded-xl bg-black justify-center items-center">
@@ -373,6 +385,40 @@
     const texting2 = document.querySelector('#texting2');
     const nav = document.querySelector('#navi');
     const liquid = document.querySelector('#liquid');
+    const wsun = document.querySelector('#wsun');
+    const bsun = document.querySelector('#bsun');
+    const wmoon = document.querySelector('#wmoon');
+    const bmoon = document.querySelector('#bmoon');
+    const box1 = document.querySelector('#box1');
+    const box2 = document.querySelector('#box2');
+    const body = document.querySelector('body');
+    const flower = document.querySelector('#flower');
+    const flower2 = document.querySelector('#flower2');
+    box1.addEventListener('click', () => {
+        document.documentElement.classList.remove('dark');
+        flower.classList.remove('hidden');
+        flower2.classList.add('hidden');
+        wsun.querySelector('img').classList.remove('hidden');
+        bsun.querySelector('img').classList.add('hidden');
+        wmoon.querySelector('img').classList.add('hidden');
+        bmoon.querySelector('img').classList.remove('hidden');
+        box1.classList.add('bg-black');
+        box2.classList.remove('bg-black');
+
+    });
+    box2.addEventListener('click', () => {
+
+        flower.classList.add('hidden');
+        flower2.classList.remove('hidden');
+        document.documentElement.classList.add('dark');
+        wsun.querySelector('img').classList.remove('hidden');
+        bsun.querySelector('img').classList.add('hidden');
+        wmoon.querySelector('img').classList.add('hidden');
+        bmoon.querySelector('img').classList.remove('hidden');
+        box2.classList.add('bg-white');
+        box1.classList.remove('bg-black');
+    });
+
     window.addEventListener('mousemove', e => {
         cursor.style.left = e.clientX + 'px';
         cursor.style.top = e.clientY + 'px';
@@ -380,6 +426,7 @@
     texting.addEventListener('mouseenter', () => {
         texting.classList.add('text-white');
         texting2.classList.remove('text-white');
+        texting2.classList.add('text-purple-500');
     });
     texting.addEventListener('mouseleave', () => {
         texting.classList.remove('text-white');

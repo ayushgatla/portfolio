@@ -1,0 +1,194 @@
+@import url(https://db.onlinewebfonts.com/c/0a3ba5727ba8b16112021456bd4c9258?family=Media+Sans+SemiCondensed);
+
+html {
+    scroll-behavior: smooth;
+}
+
+.intro_text {
+
+    font-family: "Media Sans SemiCondensed";
+
+
+}
+
+#texting {
+    transition: all 0.5s ease-out;
+
+}
+
+#texting2 {
+    transition: all 0.5s ease-out;
+}
+
+.liquid-cursor {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+
+    transition: transform 0.1s ease-out;
+    z-index: 9999;
+}
+
+.pop-out-text {
+
+    animation: pop 2s ease-in-out forwards;
+
+
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.divs {
+    animation: app linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+@keyframes app {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+
+}
+
+.solar-system {
+
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+
+}
+
+.orbit {
+    inset: 50%;
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.636);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.orbit-1 {
+    width: 200px;
+    height: 200px;
+    animation: spin 6s linear infinite;
+}
+
+.orbit-2 {
+    width: 400px;
+    height: 400px;
+    animation: spinReverse 9s linear infinite;
+}
+
+.orbit-3 {
+    width: 600px;
+    height: 600px;
+    animation: spin 15s linear infinite;
+}
+
+.orbit-4 {
+    width: 800px;
+    height: 800px;
+    animation: spinReverse 18s linear infinite;
+}
+
+.orbit-5 {
+    width: 1000px;
+    height: 1000px;
+    animation: spin 22s linear infinite;
+}
+
+.planet {
+    width: 70px;
+    height: 70px;
+    background: black;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    animation: app linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+.planet:hover {
+    width: 100px;
+    height: 100px;
+    background: black;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%) scale(1.4);
+    display: grid;
+    place-items: center;
+
+
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes spinReverse {
+    from {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+@font-face {
+    font-family: "Monocraft";
+    src: url("/fonts/Monocraft.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mine {
+    font-family: "Monocraft", monospace;
+
+}

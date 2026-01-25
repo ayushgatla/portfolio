@@ -70,13 +70,16 @@
             </div>
         </ul>
     </nav>
-    <section id="home" class="h-auto pt-4">
+    <section id="home" class="h-auto pt-2">
 
         <div id="liquid" class="liquid-cursor hidden"></div>
 
 
-        <div class="flex relative group justify-center items-center flex-col h-full  ">
-            <div class="w-full h-[80px] flex justify-center items-center ">
+        <div id="container"
+            class="flex relative group justify-center items-center flex-col h-full overflow-hidden overflow-x-hidden  ">
+            <img id="moon" src="bgs/moonkight.png" class="absolute bottom-0 w-[clamp(800px,800px,900px)] h-auto "
+                alt="">
+            <div class="w-full h-[80px] flex justify-center items-center " style="z-index: 1;">
                 <div class="w-[120px] flex h-[50px] border border-2 rounded-xl">
                     <div id="box1" class="w-1/2 h-full rounded-xl bg-black flex justify-center items-center">
                         <button id="wsun">
@@ -98,19 +101,20 @@
                     </div>
                 </div>
             </div>
-            <div class="gap-1 mt-12">
-                <h1 class="text-[clamp(2rem,10vw,2rem)] text-center font-thin ">👋,my name is Ayush Gatla</h1>
+            <div class="gap-1 mt-12" style="z-index: 1;">
+                <h1 class="text-[clamp(2rem,10vw,2rem)] text-center font-thin ">👋,my name is Ayush
+                    Gatla</h1>
 
 
                 <h1 id="texting"
                     class="text-[clamp(6rem,10vw,15rem)] max-sm:mt-auto text-purple-500 text-center font-bold intro_text pop-out-text  p-4 hover:outline-black"
-                    style="-webkit-text-stroke: 2px rgb(0, 0, 0);">
+                    style="-webkit-text-stroke: 2px rgb(0, 0, 0); z-index: 1;">
                     Welcome to
                     My </h1>
 
                 <h1 id="texting2"
                     class="text-[clamp(6rem,10vw,15rem)] pop-out-text text-center text-white font-bold intro_text"
-                    style="-webkit-text-stroke: 2px rgba(0, 0, 0, 0.824);">Portfolio</h1>
+                    style="-webkit-text-stroke: 2px rgba(0, 0, 0, 0.824);" style="z-index: 1;">Portfolio</h1>
 
             </div>
 
@@ -394,6 +398,22 @@
     const body = document.querySelector('body');
     const flower = document.querySelector('#flower');
     const flower2 = document.querySelector('#flower2');
+    const moon = document.querySelector('#moon');
+    const container = document.querySelector('#container');
+    const bgImage = document.querySelector('#moon');
+    container.addEventListener('mousemove', (e) => {
+        const xPos = e.clientX;
+        const yPos = e.clientY;
+
+        const moveX = (xPos - container.offsetWidth / 2) * -0.05; // -0.05 is the movement multiplier/sensitivity
+        const moveY = (yPos - container.offsetHeight / 2) * -0.05;
+
+        bgImage.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
+
+    container.addEventListener('mouseleave', () => {
+        bgImage.style.transform = 'translate(0, 0)';
+    });
     box1.addEventListener('click', () => {
         document.documentElement.classList.remove('dark');
         flower.classList.remove('hidden');

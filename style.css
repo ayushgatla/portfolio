@@ -210,6 +210,14 @@ html {
 }
 
 /* Dark Mode Styles */
+#moon {
+    transition: transform 0.1s linear;
+}
+
+html.dark #home {
+    background-color: #000000;
+}
+
 html.dark {
     background-color: #1a1a1a;
     color: #ffffff;
@@ -221,7 +229,7 @@ html.dark body {
 }
 
 html.dark #navi {
-    background-color: #2d2d2d;
+    background-color: #000000;
     color: #ffffff;
 }
 

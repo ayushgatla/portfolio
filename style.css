@@ -214,6 +214,10 @@ html {
     transition: transform 0.1s linear;
 }
 
+html.dark #talk {
+    background-color: #000000;
+}
+
 html.dark #home {
     background-color: #000000;
 }
@@ -224,7 +228,7 @@ html.dark {
 }
 
 html.dark body {
-    background-color: #1a1a1a;
+    background-color: #000000;
     color: #ffffff;
 }
 
@@ -273,7 +277,7 @@ html.dark .liquid-cursor {
 
 
 html.dark section {
-    background-color: #1a1a1a;
+    background-color: #000000;
     color: #ffffff;
     min-height: auto;
 }

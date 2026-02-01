@@ -30,7 +30,7 @@
                     </a>
                     <a href="index.html" class="">
                         <img id="white" src="icons/logo_white.png" class="rounded-xl hidden"
-                            style="width: 130px; height:50px z-index: 1;">
+                            style="width: 130px; height:50px ;z-index: 1;">
                     </a>
                 </li>
 
@@ -84,9 +84,14 @@
 
         <div id="container"
             class="flex relative  gap-6 group justify-center items-center flex-col h-full overflow-hidden overflow-x-hidden  ">
-            <img id="moon" src="bgs/moonkight.png" class="absolute w-[clamp(900px,900px,1000px)] h-auto " alt="">
-            <div class="w-full h-[80px] flex justify-center items-center " style="z-index: 1;">
-                <div class="w-[120px] flex h-[50px] border border-2 rounded-xl">
+            <div id="infinity" class=" h-full  max-md:w-full   hidden " style="z-index: 1;">
+                <img id="video" class="h-[500px] w-[500px] max-sm:w-full max-sm:h-auto autoplay  "
+                    src="videos/download.gif"></img>
+            </div>
+            <img id="moon" src="bgs/moonkight.png" style="z-index: 2;"
+                class="absolute w-[clamp(900px,900px,1000px)] h-auto " alt="">
+            <div class="w-full h-[80px] flex justify-center items-center  absolute top-0 left-0" style="z-index: 1;">
+                <div class="w-[120px] flex h-[50px] border border-2 rounded-xl ">
                     <div id="box1" class="w-1/2 h-full rounded-xl bg-black flex justify-center items-center">
                         <button id="wsun">
                             <img src="icons/white_sun.png" class="w-[30px] h-[30px]" alt="">
@@ -107,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            <div class="gap-1 mt-12 max-sm:flex-col-reverse max-sm:flex" style="z-index: 1;">
+            <div class="gap-1 mt-12 max-sm:flex-col-reverse max-sm:flex absolute" style="z-index: 3;">
                 <h1 class="text-[clamp(1.5rem,5vw,2rem)] text-center font-thin ">👋,my name is Ayush
                     Gatla</h1>
 
@@ -535,6 +540,8 @@
     const pika = document.querySelector('#pika');
     const ash = document.querySelector('#ash');
     const gengar = document.querySelector('#gengar');
+    const infinity = document.querySelector('#infinity');
+    const video = document.querySelector('#video');
 
 
     container.addEventListener('mousemove', (e) => {
@@ -573,6 +580,7 @@
         pika.classList.remove('hidden');
         ash.classList.remove('hidden');
         gengar.classList.add('hidden');
+        infinity.classList.add('hidden');
 
     });
     box2.addEventListener('click', () => {
@@ -599,6 +607,9 @@
         pika.classList.add('hidden');
         ash.classList.add('hidden');
         gengar.classList.remove('hidden');
+        infinity.classList.remove('hidden');
+        video.play();
+
     });
 
     window.addEventListener('mousemove', e => {

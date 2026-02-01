@@ -88,6 +88,10 @@
                 <img id="video" class="h-[500px] w-[500px] max-sm:w-full max-sm:h-auto autoplay  "
                     src="videos/download.gif"></img>
             </div>
+            <div id="white_infi" class=" h-full  max-md:w-full  " style="z-index: 1;">
+                <img id="video2" class="h-[500px] w-[500px] max-sm:w-full max-sm:h-auto autoplay  "
+                    src="videos/white.gif"></img>
+            </div>
             <img id="moon" src="bgs/moonkight.png" style="z-index: 2;"
                 class="absolute w-[clamp(900px,900px,1000px)] h-auto " alt="">
             <div class="w-full h-[80px] flex justify-center items-center  absolute top-0 left-0" style="z-index: 1;">
@@ -112,9 +116,10 @@
                     </div>
                 </div>
             </div>
-            <div class="gap-1 mt-12 max-sm:flex-col-reverse max-sm:flex absolute max-sm:top-1/2" style="z-index: 3;">
-                <h1 class="text-[clamp(1.5rem,5vw,2rem)] text-center font-thin ">👋,my name is Ayush
-                    Gatla</h1>
+            <div id="greeti" class="gap-1 mt-12 max-sm:flex-col-reverse max-sm:flex absolute  max-sm:top-1/2"
+                style="z-index: 3;">
+                <!-- <h1 class="text-[clamp(1.5rem,5vw,2rem)] text-center font-thin ">👋,my name is Ayush
+                    Gatla</h1> -->
 
                 <div>
 
@@ -542,6 +547,8 @@
     const gengar = document.querySelector('#gengar');
     const infinity = document.querySelector('#infinity');
     const video = document.querySelector('#video');
+    const greeti = document.querySelector('#greeti');
+    const white_infi = document.querySelector('#white_infi');
 
 
     container.addEventListener('mousemove', (e) => {
@@ -581,6 +588,9 @@
         ash.classList.remove('hidden');
         gengar.classList.add('hidden');
         infinity.classList.add('hidden');
+        greeti.classList.remove('flex-col-reverse')
+        greeti.classList.remove('flex')
+        white_infi.classList.remove('hidden');
 
     });
     box2.addEventListener('click', () => {
@@ -608,7 +618,10 @@
         ash.classList.add('hidden');
         gengar.classList.remove('hidden');
         infinity.classList.remove('hidden');
-        video.play();
+        greeti.classList.add('flex-col-reverse')
+        greeti.classList.add('flex')
+        white_infi.classList.add('hidden');
+
 
     });
 

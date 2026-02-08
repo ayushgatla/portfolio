@@ -24,6 +24,7 @@
         class="flex bg-white font-sans h-14 w-[100%] items-center text-gray-200 max-md:justify-center max-md:items-center">
         <ul class="flex w-full  max-md:justify-center max-md:items-center">
             <div class="items-center max-md:hidden w-[33%] flex ml-5 ">
+
                 <li>
                     <a id="logo" href="index.html">
                         <img src="icons/logo.png" class="rounded-xl" style="width: 130px; height:50px">
@@ -79,7 +80,10 @@
     </nav>
     <section id="home" class="h-screen pt-2">
 
-        <div id="liquid" class="liquid-cursor hidden"></div>
+        <div id="liquid" class="liquid-cursor ">
+            <img class="h-[50px] w-[50px]" src="icons/moon_cursor.png" alt="">
+
+        </div>
 
 
         <div id="container"
@@ -555,7 +559,7 @@
         const xPos = e.clientX;
         const yPos = e.clientY;
 
-        const moveX = (xPos - container.offsetWidth / 2) * -0.05; // -0.05 is the movement multiplier/sensitivity
+        const moveX = (xPos - container.offsetWidth / 2) * -0.05;
         const moveY = (yPos - container.offsetHeight / 2) * -0.05;
 
         bgImage.style.transform = `translate(${moveX}px, ${moveY}px)`;

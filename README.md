@@ -10,8 +10,9 @@
 
 ## 📸 Preview
 
-![Portfolio Preview](./front.png)
 
+
+[Visit my portfolio page -->>](https://legendary-bubblegum-d37f63.a.app/)
 ---
 
 ## 👋 About

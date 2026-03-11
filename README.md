@@ -12,7 +12,7 @@
 
 
 
-[Visit my portfolio page -->>](https://legendary-bubblegum-d37f63.a.app/)
+[Visit my portfolio page -->>](https://legendary-bubblegum-d37f63.netlify.app/)
 ---
 
 ## 👋 About

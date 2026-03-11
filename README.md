@@ -9,7 +9,11 @@
 ---
 
 ## 📸 Preview
-<img src="ttps://raw.githubusercontent.com/ayushgatla/portfolio/edit/main/Showcase/dark.png">
+<img
+  src="https://raw.githubusercontent.com/ayushgatla/portfolio/edit/main/Showcase/dark.png"
+  style="border-radius:1rem;width:280px;max-width:100%;"
+/>
+
 <video src="https://raw.githubusercontent.com/ayushgatla/portfolio/edit/main/Showcase/showcase.mp4" controls="controls" style="max-width: 100%;"></video>
 
 

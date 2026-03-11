@@ -10,7 +10,7 @@
 
 ## 📸 Preview
 <img
-  src="https://raw.githubusercontent.com/ayushgatla/portfolio/edit/main/Showcase/dark.png"
+  src="https://github.com/ayushgatla/portfolio/tree/main/Showcase/dark.png"
   style="border-radius:1rem;width:280px;max-width:100%;"
 />
 

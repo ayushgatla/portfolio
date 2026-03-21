@@ -128,7 +128,7 @@
                 <div>
 
                     <h1 id="texting"
-                        class="text-[clamp(4rem,9vw,14rem)] max-sm:mt-auto text-purple-500 text-center font-bold intro_text pop-out-text  p-4 hover:outline-black"
+                        class="text-[clamp(4rem,9vw,14rem)] max-sm:mt-auto text-gray-900 text-center font-bold intro_text pop-out-text  p-4 hover:outline-black"
                         style="-webkit-text-stroke: 2px rgb(0, 0, 0); z-index: 1;">
                         Welcome to
                         My </h1>
@@ -642,12 +642,10 @@
         texting.classList.add('text-white');
         texting2.classList.remove('text-white');
         if (curr === 0) {
-
-            texting2.classList.add('text-purple-500');
+            texting2.classList.add('text-black');
         }
         else {
-            texting2.classList.add('text-black');
-
+            texting2.classList.add('text-purple-500');
         }
     });
     texting.addEventListener('mouseleave', () => {

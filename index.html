@@ -203,7 +203,7 @@
                 <div class="orbit orbit-5 text-white">
                     <div class="planet  text-sm">Python</div>
                 </div>
-                 <div class="orbit orbit-6 text-white">
+                <div class="orbit orbit-6 text-white">
                     <div class="planet  text-sm">LINUX</div>
                 </div>
 
@@ -557,7 +557,7 @@
     const greeti = document.querySelector('#greeti');
     const white_infi = document.querySelector('#white_infi');
 
-
+    let curr = 0;
     container.addEventListener('mousemove', (e) => {
         const xPos = e.clientX;
         const yPos = e.clientY;
@@ -598,6 +598,7 @@
         greeti.classList.remove('flex-col-reverse')
         greeti.classList.remove('flex')
         white_infi.classList.remove('hidden');
+        curr = 0;
 
     });
     box2.addEventListener('click', () => {
@@ -629,6 +630,7 @@
         greeti.classList.add('flex')
         white_infi.classList.add('hidden');
 
+        curr = 1;
 
     });
 
@@ -639,12 +641,20 @@
     texting.addEventListener('mouseenter', () => {
         texting.classList.add('text-white');
         texting2.classList.remove('text-white');
-        texting2.classList.add('text-purple-500');
+        if (curr === 0) {
+
+            texting2.classList.add('text-purple-500');
+        }
+        else {
+            texting2.classList.add('text-black');
+
+        }
     });
     texting.addEventListener('mouseleave', () => {
         texting.classList.remove('text-white');
         texting2.classList.add('text-white');
-
+        texting2.classList.remove('text-purple-500');
+        texting2.classList.remove('text-black');
     });
     nav.addEventListener('mouseenter', () => {
         liquid.classList.remove('liquid-cursor');

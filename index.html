@@ -598,6 +598,11 @@
         greeti.classList.remove('flex-col-reverse')
         greeti.classList.remove('flex')
         white_infi.classList.remove('hidden');
+        texting.classList.add('text-gray-900');
+        texting.classList.remove('text-purple-500');
+
+
+
         curr = 0;
 
     });
@@ -629,6 +634,8 @@
         greeti.classList.add('flex-col-reverse')
         greeti.classList.add('flex')
         white_infi.classList.add('hidden');
+        texting.classList.remove('text-gray-900');
+        texting.classList.add('text-purple-500');
 
         curr = 1;
 
@@ -640,6 +647,7 @@
     });
     texting.addEventListener('mouseenter', () => {
         texting.classList.add('text-white');
+        texting.classList.remove('text-purple-500');
         texting2.classList.remove('text-white');
         if (curr === 0) {
             texting2.classList.add('text-black');
@@ -650,9 +658,13 @@
     });
     texting.addEventListener('mouseleave', () => {
         texting.classList.remove('text-white');
+        if (curr == 1) {
+
+            texting.classList.add('text-purple-500');
+        }
         texting2.classList.add('text-white');
         texting2.classList.remove('text-purple-500');
-        texting2.classList.remove('text-black');
+        texting2.classList.remove('text-gray-800');
     });
     nav.addEventListener('mouseenter', () => {
         liquid.classList.remove('liquid-cursor');
